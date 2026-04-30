@@ -5,6 +5,7 @@
 <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=22&duration=2600&pause=850&color=C084FC&center=true&vCenter=true&width=900&lines=Django+%2B+PostgreSQL+for+real+operations;Dashboards+that+make+the+business+visible;Backend+rules+that+protect+the+workflow;Clean+interfaces+people+can+actually+use" alt="Animated profile tagline" />
 
 [![Email](https://img.shields.io/badge/Email-mateococa.job%40gmail.com-A855F7?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mateococa.job@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-froaky.com-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://www.froaky.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-Froaky-4C1D95?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Froaky)
 [![Location](https://img.shields.io/badge/Salta-Argentina-6D28D9?style=for-the-badge)](https://www.google.com/maps/place/Salta,+Argentina)
 
@@ -65,7 +66,7 @@ Gerayse is my strongest proof of work: a Django system designed around real oper
 | Management visibility | Dashboards for financial reading, profitability, debt status and operational control |
 | Engineering quality | Django ORM modeling, migrations, focused tests, documentation and backlog discipline |
 
-[View repository](https://github.com/Froaky/gerayse1.0) · [Read project overview](https://github.com/Froaky/gerayse1.0/blob/main/docs/portfolio-gerayse.md)
+[View repository](https://github.com/Froaky/gerayse1.0) | [Read project overview](https://github.com/Froaky/gerayse1.0/blob/main/docs/portfolio-gerayse.md)
 
 ## Featured Work
 
@@ -73,7 +74,7 @@ Gerayse is my strongest proof of work: a Django system designed around real oper
 |---|---|---|
 | [Gerayse](https://github.com/Froaky/gerayse1.0) | Operational cash and treasury management system for branch-based businesses. Includes cash boxes, shifts, movements, closings, role-based screens and business dashboards. | Django, PostgreSQL, HTMX |
 | [Customer Churn ML](https://github.com/Froaky/customer-churn-ml) | Machine Learning project for customer retention decisions. Includes EDA, preprocessing, model comparison and business-oriented metric interpretation. | Python, pandas, scikit-learn |
-| [Portfolio](https://github.com/Froaky/portfolio) | Personal developer portfolio built as a frontend project. | Next.js, TypeScript, CSS |
+| [Portfolio](https://www.froaky.com/) | Personal developer portfolio built as a frontend project and published at `froaky.com`. | Next.js, TypeScript, CSS |
 
 ## Current Focus
 
@@ -103,5 +104,6 @@ Gerayse is my strongest proof of work: a Django system designed around real oper
 I am open to fullstack developer roles, freelance projects and business software opportunities where reliability, clarity and execution matter.
 
 - Email: [mateococa.job@gmail.com](mailto:mateococa.job@gmail.com)
+- Portfolio: [froaky.com](https://www.froaky.com/)
 - GitHub: [github.com/Froaky](https://github.com/Froaky)
 - Location: Salta, Argentina
