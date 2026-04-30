@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/profile-banner.svg" alt="Mateo Coca - Fullstack Developer" width="100%" />
+<img src="./assets/profile-banner-v2.svg" alt="Mateo Coca - Fullstack Developer" width="100%" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=22&duration=2600&pause=850&color=C084FC&center=true&vCenter=true&width=900&lines=Django+%2B+PostgreSQL+for+real+operations;Dashboards+that+make+the+business+visible;Backend+rules+that+protect+the+workflow;Clean+interfaces+people+can+actually+use" alt="Animated profile tagline" />
 
