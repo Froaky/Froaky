@@ -43,15 +43,14 @@ My strongest focus is turning messy operational processes into clear web systems
 | [Customer Churn ML](https://github.com/Froaky/customer-churn-ml) | Machine Learning project for customer retention decisions. Includes EDA, preprocessing, model comparison and business-oriented metric interpretation. | Python, pandas, scikit-learn |
 | [Portfolio](https://github.com/Froaky/portfolio) | Personal developer portfolio built as a frontend project. | Next.js, TypeScript, CSS |
 
-## GitHub Snapshot
+## Current Focus
 
-<div align="center">
-
-![Mateo's GitHub stats](https://github-readme-stats.vercel.app/api?username=Froaky&show_icons=true&theme=github_dark&hide_border=true)
-
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Froaky&layout=compact&theme=github_dark&hide_border=true)
-
-</div>
+| Area | What I can help with |
+|---|---|
+| Business web apps | Internal systems, admin panels, CRUD workflows, dashboards and role-based access |
+| Backend | Django apps, PostgreSQL data models, service-layer business rules and tests |
+| Frontend | Clean interfaces with Next.js, TypeScript, HTML, CSS and responsive layouts |
+| Data projects | Python analysis, ML pipelines, model evaluation and business-oriented conclusions |
 
 ## Contact
 
