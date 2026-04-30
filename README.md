@@ -4,7 +4,6 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=22&duration=2600&pause=850&color=C084FC&center=true&vCenter=true&width=900&lines=Django+%2B+PostgreSQL+for+real+operations;Dashboards+that+make+the+business+visible;Backend+rules+that+protect+the+workflow;Clean+interfaces+people+can+actually+use" alt="Animated profile tagline" />
 
-[![Available for work](https://img.shields.io/badge/Available%20for-Fullstack%20Roles-7C3AED?style=for-the-badge)](mailto:mateococa.job@gmail.com)
 [![Email](https://img.shields.io/badge/Email-mateococa.job%40gmail.com-A855F7?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mateococa.job@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Froaky-4C1D95?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Froaky)
 [![Location](https://img.shields.io/badge/Salta-Argentina-6D28D9?style=for-the-badge)](https://www.google.com/maps/place/Salta,+Argentina)

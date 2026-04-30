@@ -28,23 +28,17 @@
     <ellipse cx="808" cy="72" rx="190" ry="72" fill="#F0ABFC" fill-opacity="0.34"/>
   </g>
 
-  <path d="M62 248 C232 196 359 236 486 204 C642 164 754 108 928 132 C1040 148 1114 190 1162 210" stroke="url(#glow)" stroke-width="3" stroke-opacity="0.82"/>
-  <path d="M72 72 H1128" stroke="#FFFFFF" stroke-opacity="0.18"/>
-  <path d="M72 248 H1128" stroke="#FFFFFF" stroke-opacity="0.18"/>
+  <path d="M62 238 C232 186 359 226 486 194 C642 154 754 98 928 122 C1040 138 1114 180 1162 200" stroke="url(#glow)" stroke-width="3" stroke-opacity="0.82"/>
+  <path d="M72 76 H1128" stroke="#FFFFFF" stroke-opacity="0.15"/>
+  <path d="M72 250 H1128" stroke="#FFFFFF" stroke-opacity="0.15"/>
 
-  <g transform="translate(78 78)">
-    <rect x="0" y="0" width="216" height="42" rx="21" fill="#FFFFFF" fill-opacity="0.12" stroke="#FFFFFF" stroke-opacity="0.18"/>
-    <circle cx="26" cy="21" r="8" fill="#22C55E"/>
-    <text x="46" y="27" fill="#F8FAFC" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="17" font-weight="700">Available for work</text>
-  </g>
-
-  <g transform="translate(78 132)">
+  <g transform="translate(78 126)">
     <text x="0" y="0" fill="#FFFFFF" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="0">Mateo Coca</text>
     <text x="2" y="42" fill="#E9D5FF" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="25" font-weight="700">Fullstack Developer</text>
     <text x="2" y="78" fill="#F8FAFC" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="21" font-weight="500">I turn business chaos into maintainable software.</text>
   </g>
 
-  <g transform="translate(738 96)">
+  <g transform="translate(738 94)">
     <rect x="0" y="0" width="386" height="132" rx="22" fill="#0F172A" fill-opacity="0.44" stroke="#FFFFFF" stroke-opacity="0.18"/>
     <text x="28" y="38" fill="#F8FAFC" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="19" font-weight="700">Business apps</text>
     <text x="28" y="70" fill="#DDD6FE" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="17" font-weight="600">Dashboards</text>
