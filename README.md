@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=140&color=0:1f6feb,100:0f766e&text=Mateo%20Coca&fontColor=ffffff&fontSize=42&fontAlignY=36&desc=Fullstack%20Developer%20%7C%20Business%20Web%20Apps%20%7C%20Dashboards&descAlignY=58" alt="Mateo Coca - Fullstack Developer" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=140&color=0:1f6feb,100:0f766e&text=Mateo%20Coca&fontColor=ffffff&fontSize=42&fontAlignY=36&desc=Fullstack%20Developer%20%7C%20I%20turn%20business%20chaos%20into%20software&descAlignY=58" alt="Mateo Coca - Fullstack Developer" />
 
 [![Available for work](https://img.shields.io/badge/Available%20for-Fullstack%20Roles-22c55e?style=for-the-badge)](mailto:mateococa.job@gmail.com)
 [![Email](https://img.shields.io/badge/Email-mateococa.job%40gmail.com-1f6feb?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mateococa.job@gmail.com)
@@ -13,9 +13,20 @@
 
 ## What I Build
 
-I build practical software for real business workflows: cash control, treasury operations, dashboards, user roles, reporting and process automation.
+I build the kind of internal software companies start needing when spreadsheets, manual control and scattered information stop being enough.
 
-My strongest focus is turning messy operational processes into clear web systems that people can use every day.
+My strongest focus is turning messy business workflows into clear systems: cash control, treasury operations, dashboards, user roles, reporting and process automation.
+
+I do not only code screens. I map the operation, protect the business rules, document the decisions and leave the system easier to maintain.
+
+## Why Teams Hire Me
+
+| I bring | What that means for the company |
+|---|---|
+| Business-first thinking | I care about the workflow, not only the ticket. The software has to match how people actually work. |
+| Fullstack execution | I can move from database model to backend rules to usable screens without losing context. |
+| Operational control | I understand cash, treasury, roles, reports, validations and audit trails as product requirements. |
+| Maintainable delivery | I write with structure, tests and documentation so the next change is cheaper, not harder. |
 
 ## Tech Stack
 
@@ -54,7 +65,7 @@ My strongest focus is turning messy operational processes into clear web systems
 
 ## Contact
 
-I am open to fullstack developer roles, freelance projects and business software opportunities.
+I am open to fullstack developer roles, freelance projects and business software opportunities where reliability, clarity and execution matter.
 
 - Email: [mateococa.job@gmail.com](mailto:mateococa.job@gmail.com)
 - GitHub: [github.com/Froaky](https://github.com/Froaky)
