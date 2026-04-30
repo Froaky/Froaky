@@ -2,6 +2,8 @@
 
 <img src="./assets/profile-banner.svg" alt="Mateo Coca - Fullstack Developer" width="100%" />
 
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=22&duration=2600&pause=850&color=C084FC&center=true&vCenter=true&width=900&lines=Django+%2B+PostgreSQL+for+real+operations;Dashboards+that+make+the+business+visible;Backend+rules+that+protect+the+workflow;Clean+interfaces+people+can+actually+use" alt="Animated profile tagline" />
+
 [![Available for work](https://img.shields.io/badge/Available%20for-Fullstack%20Roles-7C3AED?style=for-the-badge)](mailto:mateococa.job@gmail.com)
 [![Email](https://img.shields.io/badge/Email-mateococa.job%40gmail.com-A855F7?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mateococa.job@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Froaky-4C1D95?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Froaky)
@@ -27,6 +29,10 @@ I do not only code screens. I map the operation, protect the business rules, doc
 | Fullstack execution | I can move from database model to backend rules to usable screens without losing context. |
 | Operational control | I understand cash, treasury, roles, reports, validations and audit trails as product requirements. |
 | Maintainable delivery | I write with structure, tests and documentation so the next change is cheaper, not harder. |
+
+## How I Work
+
+<img src="./assets/delivery-flow.svg" alt="Understand, model, build and prove delivery flow" width="100%" />
 
 ## Tech Stack
 
@@ -62,6 +68,13 @@ I do not only code screens. I map the operation, protect the business rules, doc
 | Backend | Django apps, PostgreSQL data models, service-layer business rules and tests |
 | Frontend | Clean interfaces with Next.js, TypeScript, HTML, CSS and responsive layouts |
 | Data projects | Python analysis, ML pipelines, model evaluation and business-oriented conclusions |
+
+## Engineering Signals
+
+- I separate business rules from UI code.
+- I think in workflows, validations, permissions and auditability.
+- I document decisions so a project can survive beyond the first delivery.
+- I use tests where regressions would hurt money, access, reports or core behavior.
 
 ## Contact
 
