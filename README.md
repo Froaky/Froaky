@@ -51,6 +51,22 @@ I do not only code screens. I map the operation, protect the business rules, doc
 
 </div>
 
+## Signature Case Study
+
+### Gerayse: operational cash and treasury control
+
+Gerayse is my strongest proof of work: a Django system designed around real operational control, not a generic CRUD demo.
+
+| Product area | What it demonstrates |
+|---|---|
+| Cash operations | Cash boxes, shifts, openings, movements, closings, branch control and operational alerts |
+| Treasury | Suppliers, payables, payments, central cash, bank records and availability views |
+| Business rules | Service-layer workflows, validations, role-aware screens and audit-oriented decisions |
+| Management visibility | Dashboards for financial reading, profitability, debt status and operational control |
+| Engineering quality | Django ORM modeling, migrations, focused tests, documentation and backlog discipline |
+
+[View repository](https://github.com/Froaky/gerayse1.0) · [Read project overview](https://github.com/Froaky/gerayse1.0/blob/main/docs/portfolio-gerayse.md)
+
 ## Featured Work
 
 | Project | What it shows | Stack |
@@ -67,6 +83,13 @@ I do not only code screens. I map the operation, protect the business rules, doc
 | Backend | Django apps, PostgreSQL data models, service-layer business rules and tests |
 | Frontend | Clean interfaces with Next.js, TypeScript, HTML, CSS and responsive layouts |
 | Data projects | Python analysis, ML pipelines, model evaluation and business-oriented conclusions |
+
+## Best Fit
+
+- Companies that need internal tools, dashboards or operational software.
+- Teams replacing spreadsheets, manual controls or scattered business processes.
+- Projects where backend rules, data consistency and usable screens matter together.
+- Roles where a developer has to understand the business context, not only close tickets.
 
 ## Engineering Signals
 
