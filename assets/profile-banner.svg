@@ -1,0 +1,54 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Mateo Coca - Fullstack Developer</title>
+  <desc id="desc">Purple profile banner for Mateo Coca, fullstack developer focused on business apps, dashboards and operational control.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16002E"/>
+      <stop offset="0.42" stop-color="#4C1D95"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="124" y1="35" x2="1122" y2="276" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C084FC" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="blur" x="-80" y="-80" width="1360" height="480" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="36"/>
+    </filter>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M 42 0 L 0 0 0 42" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="320" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="28" fill="url(#grid)"/>
+
+  <g filter="url(#blur)">
+    <ellipse cx="256" cy="40" rx="220" ry="84" fill="#9333EA" fill-opacity="0.75"/>
+    <ellipse cx="1006" cy="268" rx="260" ry="104" fill="#06B6D4" fill-opacity="0.38"/>
+    <ellipse cx="808" cy="72" rx="190" ry="72" fill="#F0ABFC" fill-opacity="0.34"/>
+  </g>
+
+  <path d="M62 248 C232 196 359 236 486 204 C642 164 754 108 928 132 C1040 148 1114 190 1162 210" stroke="url(#glow)" stroke-width="3" stroke-opacity="0.82"/>
+  <path d="M72 72 H1128" stroke="#FFFFFF" stroke-opacity="0.18"/>
+  <path d="M72 248 H1128" stroke="#FFFFFF" stroke-opacity="0.18"/>
+
+  <g transform="translate(78 78)">
+    <rect x="0" y="0" width="216" height="42" rx="21" fill="#FFFFFF" fill-opacity="0.12" stroke="#FFFFFF" stroke-opacity="0.18"/>
+    <circle cx="26" cy="21" r="8" fill="#22C55E"/>
+    <text x="46" y="27" fill="#F8FAFC" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="17" font-weight="700">Available for work</text>
+  </g>
+
+  <g transform="translate(78 132)">
+    <text x="0" y="0" fill="#FFFFFF" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="0">Mateo Coca</text>
+    <text x="2" y="42" fill="#E9D5FF" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="25" font-weight="700">Fullstack Developer</text>
+    <text x="2" y="78" fill="#F8FAFC" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="21" font-weight="500">I turn business chaos into maintainable software.</text>
+  </g>
+
+  <g transform="translate(738 96)">
+    <rect x="0" y="0" width="386" height="132" rx="22" fill="#0F172A" fill-opacity="0.44" stroke="#FFFFFF" stroke-opacity="0.18"/>
+    <text x="28" y="38" fill="#F8FAFC" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="19" font-weight="700">Business apps</text>
+    <text x="28" y="70" fill="#DDD6FE" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="17" font-weight="600">Dashboards</text>
+    <text x="28" y="102" fill="#DDD6FE" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="17" font-weight="600">Operational control</text>
+    <path d="M248 34 L320 34 M248 66 L340 66 M248 98 L302 98" stroke="#C084FC" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

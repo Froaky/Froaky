@@ -1,11 +1,11 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=140&color=0:1f6feb,100:0f766e&text=Mateo%20Coca&fontColor=ffffff&fontSize=42&fontAlignY=36&desc=Fullstack%20Developer%20%7C%20I%20turn%20business%20chaos%20into%20software&descAlignY=58" alt="Mateo Coca - Fullstack Developer" />
+<img src="./assets/profile-banner.svg" alt="Mateo Coca - Fullstack Developer" width="100%" />
 
-[![Available for work](https://img.shields.io/badge/Available%20for-Fullstack%20Roles-22c55e?style=for-the-badge)](mailto:mateococa.job@gmail.com)
-[![Email](https://img.shields.io/badge/Email-mateococa.job%40gmail.com-1f6feb?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mateococa.job@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Froaky-24292f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Froaky)
-[![Location](https://img.shields.io/badge/Salta-Argentina-0f766e?style=for-the-badge)](https://www.google.com/maps/place/Salta,+Argentina)
+[![Available for work](https://img.shields.io/badge/Available%20for-Fullstack%20Roles-7C3AED?style=for-the-badge)](mailto:mateococa.job@gmail.com)
+[![Email](https://img.shields.io/badge/Email-mateococa.job%40gmail.com-A855F7?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mateococa.job@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Froaky-4C1D95?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Froaky)
+[![Location](https://img.shields.io/badge/Salta-Argentina-6D28D9?style=for-the-badge)](https://www.google.com/maps/place/Salta,+Argentina)
 
 </div>
 
@@ -33,16 +33,16 @@ I do not only code screens. I map the operation, protect the business rules, doc
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=111111)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-334155?style=flat-square&logo=sqlite&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Django](https://img.shields.io/badge/Django-4C1D95?style=flat-square&logo=django&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-6D28D9?style=flat-square&logo=postgresql&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-7C3AED?style=flat-square&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-111827?style=flat-square&logo=nextdotjs&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-9333EA?style=flat-square&logo=javascript&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-A855F7?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-C084FC?style=flat-square&logo=css3&logoColor=111827)
+![SQL](https://img.shields.io/badge/SQL-581C87?style=flat-square&logo=sqlite&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-8B5CF6?style=flat-square&logo=scikitlearn&logoColor=white)
+![Git](https://img.shields.io/badge/Git-312E81?style=flat-square&logo=git&logoColor=white)
 
 </div>
 
