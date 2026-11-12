@@ -1,109 +1,65 @@
-<div align="center">
+<a href="https://www.froaky.com/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
+    <img src="./assets/hero-light.svg" width="100%" alt="Mateo Coca, systems analyst and developer. Spreadsheets, time clocks and cash drawers, turned into systems you can audit.">
+  </picture>
+</a>
 
-<img src="./assets/profile-banner-v2.svg" alt="Mateo Coca - Fullstack Developer" width="100%" />
+I'm Mateo Coca, a systems analyst and developer in Salta, Argentina. I build the APIs and internal tools a business runs on once the spreadsheets stop being enough: treasury, attendance, compliance. I sit with the people who do the work, write their rules down, and put those rules where nobody can skip them.
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=22&duration=2600&pause=850&color=C084FC&center=true&vCenter=true&width=900&lines=Django+%2B+PostgreSQL+for+real+operations;Dashboards+that+make+the+business+visible;Backend+rules+that+protect+the+workflow;Clean+interfaces+people+can+actually+use" alt="Animated profile tagline" />
+**[froaky.com](https://www.froaky.com/)** · [CV (PDF)](https://www.froaky.com/docs/cv-en.pdf) · [mateococa.job@gmail.com](mailto:mateococa.job@gmail.com)
 
-[![Email](https://img.shields.io/badge/Email-mateococa.job%40gmail.com-A855F7?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mateococa.job@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-froaky.com-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://www.froaky.com/)
-[![GitHub](https://img.shields.io/badge/GitHub-Froaky-4C1D95?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Froaky)
-[![Location](https://img.shields.io/badge/Salta-Argentina-6D28D9?style=for-the-badge)](https://www.google.com/maps/place/Salta,+Argentina)
+## Work
 
-</div>
+<p>
+  <a href="https://www.froaky.com/projects/gerayse"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-gerayse-dark.svg"><img src="./assets/card-gerayse-light.svg" width="49%" alt="Gerayse: operations and finance for a multi-branch business. Django, PostgreSQL, HTMX."></picture></a>
+  <a href="https://www.froaky.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-odoo-mcp-dark.svg"><img src="./assets/card-odoo-mcp-light.svg" width="49%" alt="Read-only AI connector for Odoo: an MCP server inside Odoo 19. Python, MCP, OAuth 2."></picture></a>
+</p>
+<p>
+  <a href="https://www.froaky.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-zkteco-bridge-dark.svg"><img src="./assets/card-zkteco-bridge-light.svg" width="49%" alt="Time-clock bridge: a Flask API between ZKTeco biometric clocks and Odoo."></picture></a>
+  <a href="https://www.froaky.com/projects/obrastaff"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-obrastaff-dark.svg"><img src="./assets/card-obrastaff-light.svg" width="49%" alt="ObraStaff: document compliance for mining and construction. Laravel 12, Livewire 3, PostgreSQL."></picture></a>
+</p>
+<p>
+  <a href="https://github.com/Froaky/laburo"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-laburo-dark.svg"><img src="./assets/card-laburo-light.svg" width="49%" alt="laburo: an open-source command-line tool for job hunting with method. Node.js, MIT."></picture></a>
+  <a href="https://github.com/Froaky/timer-salta-rubik"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-salta-rubik-dark.svg"><img src="./assets/card-salta-rubik-light.svg" width="49%" alt="Salta Rubik: a speedcubing timer built with Flutter."></picture></a>
+</p>
 
----
+Code you can read here: [gerayse1.0](https://github.com/Froaky/gerayse1.0) · [laburo](https://github.com/Froaky/laburo) · [timer-salta-rubik](https://github.com/Froaky/timer-salta-rubik) · [customer-churn-ml](https://github.com/Froaky/customer-churn-ml). The rest belongs to clients and stays private.
 
-## What I Build
+## Decisions I'd defend
 
-I build the kind of internal software companies start needing when spreadsheets, manual control and scattered information stop being enough.
+Each of these was a problem in a real system, and what I did about it.
 
-My strongest focus is turning messy business workflows into clear systems: cash control, treasury operations, dashboards, user roles, reporting and process automation.
+```diff
+- Cash, bank balances and card sales waiting to settle were easy to add up and count twice.
++ The model keeps them as three separate things, and each dashboard reads them on its own.
 
-I do not only code screens. I map the operation, protect the business rules, document the decisions and leave the system easier to maintain.
+- An AI assistant on top of the ERP could write to it, and a filter can be bypassed.
++ The write tools were deleted. A test asserts that writing does not exist.
 
-## Why Teams Hire Me
+- If every screen recomputes who may enter a site, one of them lets in an expired certificate.
++ One rule owns the decision. Web, API, dashboard and reports all ask it.
 
-| I bring | What that means for the company |
-|---|---|
-| Business-first thinking | I care about the workflow, not only the ticket. The software has to match how people actually work. |
-| Fullstack execution | I can move from database model to backend rules to usable screens without losing context. |
-| Operational control | I understand cash, treasury, roles, reports, validations and audit trails as product requirements. |
-| Maintainable delivery | I write with structure, tests and documentation so the next change is cheaper, not harder. |
+- Attendance had to work at the counter, with no accounts for employees.
++ Each employee has a QR card. The server sets the time, and a mark can be voided, never edited.
+```
 
-## How I Work
+## Stack
 
-<img src="./assets/delivery-flow.svg" alt="Understand, model, build and prove delivery flow" width="100%" />
+- **Backend:** Python (Django, Flask, FastAPI), PHP (Laravel, Livewire), Node.js
+- **ERP:** Odoo 19 modules, XML-RPC, MCP servers
+- **Data:** PostgreSQL, SQLAlchemy, Alembic, pandas, scikit-learn
+- **Frontend:** HTMX, Next.js, TypeScript, Flutter
+- **Delivery:** pytest, Railway, Vercel, staging before production
 
-## Tech Stack
+## Off the clock
 
-<div align="center">
+<img src="./assets/cube.svg" align="right" width="150" alt="A Rubik's cube that scrambles and solves itself">
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Django](https://img.shields.io/badge/Django-4C1D95?style=flat-square&logo=django&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-6D28D9?style=flat-square&logo=postgresql&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-7C3AED?style=flat-square&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-111827?style=flat-square&logo=nextdotjs&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-9333EA?style=flat-square&logo=javascript&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-A855F7?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-C084FC?style=flat-square&logo=css3&logoColor=111827)
-![SQL](https://img.shields.io/badge/SQL-581C87?style=flat-square&logo=sqlite&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-8B5CF6?style=flat-square&logo=scikitlearn&logoColor=white)
-![Git](https://img.shields.io/badge/Git-312E81?style=flat-square&logo=git&logoColor=white)
+Speedcubing. I built [Rankings NOA](https://rankings-noa.vercel.app), with the rankings, records and history of the sport in north-west Argentina from official WCA data, and the [Salta Rubik](https://github.com/Froaky/timer-salta-rubik) timer.
 
-</div>
+Available for remote work, from Salta. Write to [mateococa.job@gmail.com](mailto:mateococa.job@gmail.com) or start at [froaky.com](https://www.froaky.com/).
 
-## Signature Case Study
+<br clear="right">
 
-### Gerayse: operational cash and treasury control
-
-Gerayse is my strongest proof of work: a Django system designed around real operational control, not a generic CRUD demo.
-
-| Product area | What it demonstrates |
-|---|---|
-| Cash operations | Cash boxes, shifts, openings, movements, closings, branch control and operational alerts |
-| Treasury | Suppliers, payables, payments, central cash, bank records and availability views |
-| Business rules | Service-layer workflows, validations, role-aware screens and audit-oriented decisions |
-| Management visibility | Dashboards for financial reading, profitability, debt status and operational control |
-| Engineering quality | Django ORM modeling, migrations, focused tests, documentation and backlog discipline |
-
-[View repository](https://github.com/Froaky/gerayse1.0) | [Read project overview](https://github.com/Froaky/gerayse1.0/blob/main/docs/portfolio-gerayse.md)
-
-## Featured Work
-
-| Project | What it shows | Stack |
-|---|---|---|
-| [Gerayse](https://github.com/Froaky/gerayse1.0) | Operational cash and treasury management system for branch-based businesses. Includes cash boxes, shifts, movements, closings, role-based screens and business dashboards. | Django, PostgreSQL, HTMX |
-| [Customer Churn ML](https://github.com/Froaky/customer-churn-ml) | Machine Learning project for customer retention decisions. Includes EDA, preprocessing, model comparison and business-oriented metric interpretation. | Python, pandas, scikit-learn |
-| [Portfolio](https://www.froaky.com/) | Personal developer portfolio built as a frontend project and published at `froaky.com`. | Next.js, TypeScript, CSS |
-
-## Current Focus
-
-| Area | What I can help with |
-|---|---|
-| Business web apps | Internal systems, admin panels, CRUD workflows, dashboards and role-based access |
-| Backend | Django apps, PostgreSQL data models, service-layer business rules and tests |
-| Frontend | Clean interfaces with Next.js, TypeScript, HTML, CSS and responsive layouts |
-| Data projects | Python analysis, ML pipelines, model evaluation and business-oriented conclusions |
-
-## Best Fit
-
-- Companies that need internal tools, dashboards or operational software.
-- Teams replacing spreadsheets, manual controls or scattered business processes.
-- Projects where backend rules, data consistency and usable screens matter together.
-- Roles where a developer has to understand the business context, not only close tickets.
-
-## Engineering Signals
-
-- I separate business rules from UI code.
-- I think in workflows, validations, permissions and auditability.
-- I document decisions so a project can survive beyond the first delivery.
-- I use tests where regressions would hurt money, access, reports or core behavior.
-
-## Contact
-
-I am open to fullstack developer roles, freelance projects and business software opportunities where reliability, clarity and execution matter.
-
-- Email: [mateococa.job@gmail.com](mailto:mateococa.job@gmail.com)
-- Portfolio: [froaky.com](https://www.froaky.com/)
-- GitHub: [github.com/Froaky](https://github.com/Froaky)
-- Location: Salta, Argentina
+<sub>The images on this page are SVG generated by <a href="./scripts/build-assets.mjs">one script</a>. The cash log is a simulation with sample data.</sub>
