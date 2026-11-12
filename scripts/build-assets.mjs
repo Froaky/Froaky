@@ -1,4 +1,5 @@
-// Genera las piezas SVG del README de perfil (portada, tarjetas y cubo).
+// Genera las piezas SVG del README de perfil (portada, tarjetas y cubo),
+// en inglés y en español, para tema claro y oscuro.
 // Uso: node scripts/build-assets.mjs
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -23,45 +24,157 @@ const themes = {
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-// ---------------------------------------------------------------- portada
-const events = [
-  { time: '09:12', what: 'Cash in, morning shift', result: 'validated and posted', tone: 'ok' },
-  { time: '11:40', what: 'Supplier payment', result: 'validated and posted', tone: 'ok' },
-  { time: '14:05', what: 'Transfer to treasury', result: 'posted', tone: 'ok' },
-  { time: '20:30', what: 'Daily closing', result: 'ledger locked', tone: 'ok' },
-  { time: '20:42', what: 'Edit on the closed day', result: 'rejected: ledger locked', tone: 'stop' },
-];
-const nodes = [
-  { name: 'Branch cash drawer', sub: 'shifts and movements' },
-  { name: 'Business rules', sub: 'Django + PostgreSQL' },
-  { name: 'Central treasury', sub: 'daily closing, audit' },
-];
-const stats = [
-  { value: '4h → 5min', label: 'daily manual sync, automated' },
-  { value: '100%', label: 'of the spreadsheets replaced' },
-  { value: '5', label: 'systems in production' },
-  { value: '~1,400', label: 'automated tests on one system' },
-];
+// ---------------------------------------------------------------- textos
+const copy = {
+  en: {
+    suffix: '',
+    hero: {
+      title: 'Mateo Coca, systems analyst and developer',
+      desc: 'Spreadsheets, time clocks and cash drawers, turned into systems you can audit. A sample cash log shows four movements posted and an edit on a closed day rejected.',
+      eyebrow: 'MATEO COCA  /  SYSTEMS ANALYST AND DEVELOPER',
+      available: 'Available · remote, from Salta',
+      h1: 'Spreadsheets, time clocks and cash drawers,',
+      h2: ['turned into ', 'systems you can audit.'],
+      sub: 'APIs and internal tools that run day-to-day operations: treasury, attendance, compliance.',
+      tabs: ['Cash', 'Time clocks', 'Site gate', 'AI'],
+      sample: 'simulation with sample data',
+      nodes: [
+        { name: 'Branch cash drawer', sub: 'shifts and movements' },
+        { name: 'Business rules', sub: 'Django + PostgreSQL' },
+        { name: 'Central treasury', sub: 'daily closing, audit' },
+      ],
+      events: [
+        { time: '09:12', what: 'Cash in, morning shift', result: 'validated and posted', tone: 'ok' },
+        { time: '11:40', what: 'Supplier payment', result: 'validated and posted', tone: 'ok' },
+        { time: '14:05', what: 'Transfer to treasury', result: 'posted', tone: 'ok' },
+        { time: '20:30', what: 'Daily closing', result: 'ledger locked', tone: 'ok' },
+        { time: '20:42', what: 'Edit on the closed day', result: 'rejected: ledger locked', tone: 'stop' },
+      ],
+      stats: [
+        { value: '4h → 5min', label: 'daily manual sync, automated' },
+        { value: '100%', label: 'of the spreadsheets replaced' },
+        { value: '5', label: 'systems in production' },
+        { value: '~1,400', label: 'automated tests on one system' },
+      ],
+    },
+    cards: [
+      {
+        id: 'gerayse', tag: 'FINANCE · IN PRODUCTION', title: 'Gerayse',
+        desc: ['Operations and finance for a multi-branch business:', 'cash drawers, treasury, payables, banks and attendance.', 'It replaced the spreadsheets.'],
+        tech: 'Django · PostgreSQL · HTMX · ~1,400 tests',
+      },
+      {
+        id: 'odoo-mcp', tag: 'ERP · AI', title: 'Read-only AI connector for Odoo',
+        desc: ['An MCP server inside Odoo 19: each person asks Claude', 'about the ERP with their own permissions. Writing is', 'not blocked by a filter; it does not exist in the code.'],
+        tech: 'Odoo 19 · Python · MCP · OAuth 2',
+      },
+      {
+        id: 'zkteco-bridge', tag: 'INTEGRATION', title: 'Time-clock bridge',
+        desc: ['A Flask API between ZKTeco biometric clocks and Odoo.', "It speaks the clocks' PUSH protocol and persists every", 'punch before it reaches the ERP.'],
+        tech: 'Flask · SQLAlchemy · XML-RPC · pytest',
+      },
+      {
+        id: 'obrastaff', tag: 'COMPLIANCE', title: 'ObraStaff',
+        desc: ['Document compliance for mining and construction.', 'One eligibility rule decides, with a traffic light,', 'who is cleared to enter a site.'],
+        tech: 'Laravel 12 · Livewire 3 · PostgreSQL',
+      },
+      {
+        id: 'laburo', tag: 'OPEN SOURCE · MIT', title: 'laburo',
+        desc: ['A command-line tool for job hunting with method:', 'who you wrote to, who answered, what you charge', 'and what you learned. No dependencies.'],
+        tech: 'Node.js · CLI',
+      },
+      {
+        id: 'salta-rubik', tag: 'MOBILE · WEB', title: 'Salta Rubik',
+        desc: ['A speedcubing timer with WCA-style scrambles,', 'sessions, statistics and a compete mode.', 'Mobile-first, and it also runs on the web.'],
+        tech: 'Flutter · flutter_bloc · sqflite',
+      },
+    ],
+  },
+  es: {
+    suffix: '-es',
+    hero: {
+      title: 'Mateo Coca, analista de sistemas y desarrollador',
+      desc: 'Planillas, relojes y cajas, convertidos en sistemas que se pueden auditar. Un registro de caja de ejemplo muestra cuatro movimientos asentados y un cambio rechazado sobre un día cerrado.',
+      eyebrow: 'MATEO COCA  /  ANALISTA DE SISTEMAS Y DESARROLLADOR',
+      available: 'Disponible · remoto, desde Salta',
+      h1: 'Planillas, relojes y cajas, convertidos en',
+      h2: ['', 'sistemas que se pueden auditar.'],
+      sub: 'APIs y herramientas internas que sostienen la operación diaria: tesorería, asistencia, habilitaciones.',
+      tabs: ['Cajas', 'Relojes', 'Portería', 'IA'],
+      sample: 'simulación con datos de ejemplo',
+      nodes: [
+        { name: 'Caja de sucursal', sub: 'turnos y movimientos' },
+        { name: 'Reglas de negocio', sub: 'Django + PostgreSQL' },
+        { name: 'Tesorería central', sub: 'cierre diario, auditoría' },
+      ],
+      events: [
+        { time: '09:12', what: 'Ingreso, turno mañana', result: 'validado y asentado', tone: 'ok' },
+        { time: '11:40', what: 'Pago a proveedor', result: 'validado y asentado', tone: 'ok' },
+        { time: '14:05', what: 'Traspaso a tesorería', result: 'asentado', tone: 'ok' },
+        { time: '20:30', what: 'Cierre del día', result: 'libro bloqueado', tone: 'ok' },
+        { time: '20:42', what: 'Cambio en el día cerrado', result: 'rechazado: libro bloqueado', tone: 'stop' },
+      ],
+      stats: [
+        { value: '4h → 5min', label: 'sincronización manual diaria' },
+        { value: '100%', label: 'de las planillas reemplazadas' },
+        { value: '5', label: 'sistemas en producción' },
+        { value: '~1.400', label: 'tests automáticos en un sistema' },
+      ],
+    },
+    cards: [
+      {
+        id: 'gerayse', tag: 'FINANZAS · EN PRODUCCIÓN', title: 'Gerayse',
+        desc: ['Operación y finanzas de un negocio con sucursales:', 'cajas, tesorería, cuentas por pagar, bancos y asistencia.', 'Reemplazó las planillas.'],
+        tech: 'Django · PostgreSQL · HTMX · ~1.400 tests',
+      },
+      {
+        id: 'odoo-mcp', tag: 'ERP · IA · SOLO LECTURA', title: 'Conector de IA para Odoo',
+        desc: ['Un servidor MCP dentro de Odoo 19: cada persona consulta', 'el ERP desde Claude con sus propios permisos. Escribir', 'no está bloqueado por un filtro: no existe en el código.'],
+        tech: 'Odoo 19 · Python · MCP · OAuth 2',
+      },
+      {
+        id: 'zkteco-bridge', tag: 'INTEGRACIÓN', title: 'Puente de relojes',
+        desc: ['Una API en Flask entre los relojes biométricos ZKTeco', 'y Odoo. Habla el protocolo PUSH de los relojes y guarda', 'cada fichaje antes de que llegue al ERP.'],
+        tech: 'Flask · SQLAlchemy · XML-RPC · pytest',
+      },
+      {
+        id: 'obrastaff', tag: 'HABILITACIONES', title: 'ObraStaff',
+        desc: ['Habilitación documental para minería y construcción.', 'Una sola regla de elegibilidad decide, con semáforo,', 'quién puede ingresar a la obra.'],
+        tech: 'Laravel 12 · Livewire 3 · PostgreSQL',
+      },
+      {
+        id: 'laburo', tag: 'CÓDIGO ABIERTO · MIT', title: 'laburo',
+        desc: ['Una herramienta de línea de comandos para buscar', 'trabajo con método: a quién le escribiste, quién contestó,', 'cuánto cobrás y qué aprendiste. Sin dependencias.'],
+        tech: 'Node.js · CLI',
+      },
+      {
+        id: 'salta-rubik', tag: 'MÓVIL · WEB', title: 'Salta Rubik',
+        desc: ['Un timer de speedcubing con scrambles estilo WCA,', 'sesiones, estadísticas y modo competencia.', 'Pensado para el celular; también corre en la web.'],
+        tech: 'Flutter · flutter_bloc · sqflite',
+      },
+    ],
+  },
+};
 
-function hero(t) {
+// ---------------------------------------------------------------- portada
+function hero(h, t) {
   const W = 900, H = 600;
   const starts = [6, 18, 30, 42, 56]; // % del ciclo en que entra cada fila
   const rowKf = starts.map((p, i) => `
     @keyframes r${i} { 0%, ${p}% { opacity: 0; transform: translateY(6px); } ${p + 3}%, 93% { opacity: 1; transform: none; } 98%, 100% { opacity: 0; transform: none; } }
     .r${i} { animation: r${i} 14s ease-out infinite; }`).join('');
 
-  const tabs = ['Cash', 'Time clocks', 'Site gate', 'AI'];
   let tx = 72;
-  const tabsSvg = tabs.map((name, i) => {
+  const tabsSvg = h.tabs.map((name, i) => {
     const w = name.length * 7.3;
-    const s = `<text x="${tx}" y="256" class="mono" font-size="12" fill="${i === 0 ? t.text : t.muted}">${name}</text>` +
+    const s = `<text x="${tx}" y="256" class="mono" font-size="12" fill="${i === 0 ? t.text : t.muted}">${esc(name)}</text>` +
       (i === 0 ? `<rect x="${tx}" y="267" width="${w}" height="2" fill="${t.accent}"/>` : '');
     tx += w + 26;
     return s;
   }).join('');
 
   const nodeX = [72, 340, 608];
-  const nodesSvg = nodes.map((n, i) => `
+  const nodesSvg = h.nodes.map((n, i) => `
     <rect x="${nodeX[i]}" y="288" width="220" height="50" rx="8" fill="${t.bg}" stroke="${t.line}"/>
     <text x="${nodeX[i] + 16}" y="309" font-size="13.5" font-weight="600" fill="${t.text}">${esc(n.name)}</text>
     <text x="${nodeX[i] + 16}" y="327" class="mono" font-size="11" fill="${t.muted}">${esc(n.sub)}</text>`).join('');
@@ -69,7 +182,7 @@ function hero(t) {
     <line x1="${x}" y1="313" x2="${x + 48}" y2="313" stroke="${t.line}" stroke-width="1.5"/>
     <circle class="dot d${i}" cx="${x}" cy="313" r="3.5" fill="${t.accent}"/>`).join('');
 
-  const rowsSvg = events.map((e, i) => {
+  const rowsSvg = h.events.map((e, i) => {
     const y = 376 + i * 24;
     const c = t[e.tone];
     return `
@@ -82,7 +195,7 @@ function hero(t) {
     </g>`;
   }).join('');
 
-  const statsSvg = stats.map((s, i) => {
+  const statsSvg = h.stats.map((s, i) => {
     const x = 48 + i * 201;
     return `
     ${i ? `<line x1="${x}" y1="522" x2="${x}" y2="566" stroke="${t.line}"/>` : ''}
@@ -90,9 +203,11 @@ function hero(t) {
     <text x="${x + (i ? 20 : 0)}" y="562" font-size="12" fill="${t.muted}">${esc(s.label)}</text>`;
   }).join('');
 
+  const dotX = (852 - h.available.length * 7.03 - 9).toFixed(1);
+
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="t d">
-  <title id="t">Mateo Coca, systems analyst and developer</title>
-  <desc id="d">Spreadsheets, time clocks and cash drawers, turned into systems you can audit. A sample cash log shows four movements posted and an edit on a closed day rejected.</desc>
+  <title id="t">${esc(h.title)}</title>
+  <desc id="d">${esc(h.desc)}</desc>
   <style>
     text { font-family: ${SANS}; }
     .mono { font-family: ${MONO}; }
@@ -108,17 +223,17 @@ function hero(t) {
   </style>
   <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="16" fill="${t.bg}" stroke="${t.line}"/>
 
-  <text x="48" y="60" class="mono" font-size="12.5" letter-spacing="1.6" fill="${t.accent}">MATEO COCA  /  SYSTEMS ANALYST AND DEVELOPER</text>
-  <circle class="live" cx="632" cy="56" r="4" fill="${t.ok}"/>
-  <text x="852" y="60" text-anchor="end" class="mono" font-size="12.5" fill="${t.soft}">Available · remote, from Salta</text>
+  <text x="48" y="60" class="mono" font-size="12.5" letter-spacing="1.6" fill="${t.accent}">${esc(h.eyebrow)}</text>
+  <circle class="live" cx="${dotX}" cy="56" r="4" fill="${t.ok}"/>
+  <text x="852" y="60" text-anchor="end" class="mono" font-size="12.5" fill="${t.soft}">${esc(h.available)}</text>
 
-  <text x="48" y="118" font-size="33" font-weight="700" letter-spacing="-0.4" fill="${t.text}">Spreadsheets, time clocks and cash drawers,</text>
-  <text x="48" y="160" font-size="33" font-weight="700" letter-spacing="-0.4" fill="${t.text}">turned into <tspan fill="${t.accent}">systems you can audit.</tspan></text>
-  <text x="48" y="198" font-size="15.5" fill="${t.soft}">APIs and internal tools that run day-to-day operations: treasury, attendance, compliance.</text>
+  <text x="48" y="118" font-size="33" font-weight="700" letter-spacing="-0.4" fill="${t.text}">${esc(h.h1)}</text>
+  <text x="48" y="160" font-size="33" font-weight="700" letter-spacing="-0.4" fill="${t.text}">${esc(h.h2[0])}<tspan fill="${t.accent}">${esc(h.h2[1])}</tspan></text>
+  <text x="48" y="198" font-size="15.5" fill="${t.soft}">${esc(h.sub)}</text>
 
   <rect x="48.5" y="230.5" width="803" height="262" rx="12" fill="${t.panel}" stroke="${t.line}"/>
   ${tabsSvg}
-  <text x="828" y="256" text-anchor="end" class="mono" font-size="11.5" fill="${t.muted}">simulation with sample data</text>
+  <text x="828" y="256" text-anchor="end" class="mono" font-size="11.5" fill="${t.muted}">${esc(h.sample)}</text>
   <line x1="49" y1="269.5" x2="851" y2="269.5" stroke="${t.line}"/>
   ${nodesSvg}
   ${links}
@@ -129,39 +244,6 @@ function hero(t) {
 }
 
 // ---------------------------------------------------------------- tarjetas
-const cards = [
-  {
-    id: 'gerayse', tag: 'FINANCE · IN PRODUCTION', title: 'Gerayse',
-    desc: ['Operations and finance for a multi-branch business:', 'cash drawers, treasury, payables, banks and attendance.', 'It replaced the spreadsheets.'],
-    tech: 'Django · PostgreSQL · HTMX · ~1,400 tests',
-  },
-  {
-    id: 'odoo-mcp', tag: 'ERP · AI', title: 'Read-only AI connector for Odoo',
-    desc: ['An MCP server inside Odoo 19: each person asks Claude', 'about the ERP with their own permissions. Writing is', 'not blocked by a filter; it does not exist in the code.'],
-    tech: 'Odoo 19 · Python · MCP · OAuth 2',
-  },
-  {
-    id: 'zkteco-bridge', tag: 'INTEGRATION', title: 'Time-clock bridge',
-    desc: ['A Flask API between ZKTeco biometric clocks and Odoo.', "It speaks the clocks' PUSH protocol and persists every", 'punch before it reaches the ERP.'],
-    tech: 'Flask · SQLAlchemy · XML-RPC · pytest',
-  },
-  {
-    id: 'obrastaff', tag: 'COMPLIANCE', title: 'ObraStaff',
-    desc: ['Document compliance for mining and construction.', 'One eligibility rule decides, with a traffic light,', 'who is cleared to enter a site.'],
-    tech: 'Laravel 12 · Livewire 3 · PostgreSQL',
-  },
-  {
-    id: 'laburo', tag: 'OPEN SOURCE · MIT', title: 'laburo',
-    desc: ['A command-line tool for job hunting with method:', 'who you wrote to, who answered, what you charge', 'and what you learned. No dependencies.'],
-    tech: 'Node.js · CLI',
-  },
-  {
-    id: 'salta-rubik', tag: 'MOBILE · WEB', title: 'Salta Rubik',
-    desc: ['A speedcubing timer with WCA-style scrambles,', 'sessions, statistics and a compete mode.', 'Mobile-first, and it also runs on the web.'],
-    tech: 'Flutter · flutter_bloc · sqflite',
-  },
-];
-
 function card(c, t) {
   const W = 440, H = 210;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(c.title)}: ${esc(c.desc.join(' '))}">
@@ -216,9 +298,16 @@ function cube() {
 }
 
 // ---------------------------------------------------------------- salida
-for (const [name, t] of Object.entries(themes)) {
-  writeFileSync(join(out, `hero-${name}.svg`), hero(t));
-  for (const c of cards) writeFileSync(join(out, `card-${c.id}-${name}.svg`), card(c, t));
+let count = 1;
+for (const c of Object.values(copy)) {
+  for (const [name, t] of Object.entries(themes)) {
+    writeFileSync(join(out, `hero${c.suffix}-${name}.svg`), hero(c.hero, t));
+    count++;
+    for (const k of c.cards) {
+      writeFileSync(join(out, `card-${k.id}${c.suffix}-${name}.svg`), card(k, t));
+      count++;
+    }
+  }
 }
 writeFileSync(join(out, 'cube.svg'), cube());
-console.log('ok:', 2 + cards.length * 2 + 1, 'archivos en assets/');
+console.log('ok:', count, 'archivos en assets/');

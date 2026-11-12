@@ -27,7 +27,7 @@
   <rect x="0.5" y="0.5" width="899" height="599" rx="16" fill="#111316" stroke="#2B3038"/>
 
   <text x="48" y="60" class="mono" font-size="12.5" letter-spacing="1.6" fill="#F2A93B">MATEO COCA  /  SYSTEMS ANALYST AND DEVELOPER</text>
-  <circle class="live" cx="632" cy="56" r="4" fill="#7FD1A0"/>
+  <circle class="live" cx="632.1" cy="56" r="4" fill="#7FD1A0"/>
   <text x="852" y="60" text-anchor="end" class="mono" font-size="12.5" fill="#B9BEC6">Available · remote, from Salta</text>
 
   <text x="48" y="118" font-size="33" font-weight="700" letter-spacing="-0.4" fill="#ECE9E1">Spreadsheets, time clocks and cash drawers,</text>

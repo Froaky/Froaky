@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="210" viewBox="0 0 440 210" role="img" aria-label="Conector de IA para Odoo: Un servidor MCP dentro de Odoo 19: cada persona consulta el ERP desde Claude con sus propios permisos. Escribir no está bloqueado por un filtro: no existe en el código.">
+  <style>text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; } .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }</style>
+  <rect x="0.5" y="0.5" width="439" height="209" rx="12" fill="#FCFBF7" stroke="#D8D2C1"/>
+  <rect x="24" y="27" width="7" height="7" fill="#A8590A"/>
+  <text x="40" y="35" class="mono" font-size="11" letter-spacing="1.3" fill="#A8590A">ERP · IA · SOLO LECTURA</text>
+  <path d="M404 36 L416 24 M407 24 H416 V33" fill="none" stroke="#666C75" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="24" y="74" font-size="21" font-weight="700" letter-spacing="-0.2" fill="#1A1C20">Conector de IA para Odoo</text>
+  <text x="24" y="102" font-size="13.5" fill="#3D424A">Un servidor MCP dentro de Odoo 19: cada persona consulta</text>
+  <text x="24" y="122" font-size="13.5" fill="#3D424A">el ERP desde Claude con sus propios permisos. Escribir</text>
+  <text x="24" y="142" font-size="13.5" fill="#3D424A">no está bloqueado por un filtro: no existe en el código.</text>
+  <line x1="24" y1="164.5" x2="416" y2="164.5" stroke="#D8D2C1"/>
+  <text x="24" y="188" class="mono" font-size="11.5" fill="#666C75">Odoo 19 · Python · MCP · OAuth 2</text>
+</svg>

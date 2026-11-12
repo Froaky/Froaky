@@ -1,3 +1,5 @@
+<p align="right"><b>English</b> · <a href="./README.es.md">Español</a></p>
+
 <a href="https://www.froaky.com/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
@@ -56,7 +58,7 @@ Each of these was a problem in a real system, and what I did about it.
 
 <img src="./assets/cube.svg" align="right" width="150" alt="A Rubik's cube that scrambles and solves itself">
 
-Speedcubing. I built [Rankings NOA](https://rankings-noa.vercel.app), with the rankings, records and history of the sport in north-west Argentina from official WCA data, and the [Salta Rubik](https://github.com/Froaky/timer-salta-rubik) timer.
+Speedcubing. I compete in the WCA ([2019COCA02](https://www.worldcubeassociation.org/persons/2019COCA02)) and built [Rankings NOA](https://rankings-noa.vercel.app), with the rankings, records and history of the sport in north-west Argentina from official WCA data, and the [Salta Rubik](https://github.com/Froaky/timer-salta-rubik) timer.
 
 Available for remote work, from Salta. Write to [mateococa.job@gmail.com](mailto:mateococa.job@gmail.com) or start at [froaky.com](https://www.froaky.com/).
 
